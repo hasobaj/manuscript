@@ -1,4 +1,11 @@
+html{
+	font-family: Karla;
+	font-size: 1.2rem;
+	line-height: 1.4;
+}
+
 body{
+	padding: 3rem;
 	font-family: Karla;
 }
 
@@ -10,34 +17,59 @@ h1{
 	font-size: 6rem;
 	font-weight: 800;
 	text-transform: uppercase;
+	color: blue;
 }
 
 h2{
 	font-size: 4rem;
+	text-transform: uppercase;
 }
 
 nav {
 	font-size: 2rem;
+	color: rgb(131, 131, 130);
+}
+
+p{
+	font-size: 1.25rem;
+	em{
+		font-style: italic;
+		}
+}
+
+blockquote p{
+	padding: 1rem;
+	padding-left: 3rem;
+	font-family: Martian Mono;
+	font-size: 1.5rem;
+	color: rgb(129, 129, 241);
 }
 
 details{
 	font-style: italic;
 }
 
+aside {
+	padding: 1rem;
+	padding-left: 3rem;
+	font-family: Martian Mono;
+	line-height: 1.7;
+	color: blue;
+}
+
 summary{
-	font-family: PT Serif;
-font-size: 1.75rem;
-}
+	font-size: 1.5rem;
+	}
 
-p{
-	font-size: 1.25rem;
-}
-
-em{
-	font-style: italic;
+details p{
+	font-size: 1rem;
 }
 
 section a{
 	color: rgb(17, 132, 65);
 	text-decoration: underline;
+}
+
+.highlight{
+	font-weight: 750;
 }
