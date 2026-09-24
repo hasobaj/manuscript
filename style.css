@@ -1,1 +1,43 @@
+body{
+	font-family: Karla;
+}
 
+hgroup{
+	font-family: Martian Mono;
+}
+
+h1{
+	font-size: 6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size: 4rem;
+}
+
+nav {
+	font-size: 2rem;
+}
+
+details{
+	font-style: italic;
+}
+
+summary{
+	font-family: PT Serif;
+font-size: 1.75rem;
+}
+
+p{
+	font-size: 1.25rem;
+}
+
+em{
+	font-style: italic;
+}
+
+section a{
+	color: rgb(17, 132, 65);
+	text-decoration: underline;
+}
