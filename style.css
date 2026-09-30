@@ -9,6 +9,10 @@ body{
 	font-family: Karla;
 }
 
+main{
+	counter-reset: section;
+}
+
 hgroup{
 	font-family: Martian Mono;
 }
@@ -25,9 +29,23 @@ h2{
 	text-transform: uppercase;
 }
 
+section h2::before{
+	counter-increment: section;
+	content: counter(section);
+	margin-inline-end: 2rem;
+}
+
 nav {
 	font-size: 2rem;
 	color: rgb(131, 131, 130);
+	counter-reset: nav;
+}
+
+nav li::before{
+	counter-increment: nav;
+	content: counter(nav);
+	display: inline-block;
+	inline-size: 2rem
 }
 
 p{
@@ -70,6 +88,6 @@ section a{
 	text-decoration: underline;
 }
 
-.highlight{
+strong{
 	font-weight: 750;
 }
