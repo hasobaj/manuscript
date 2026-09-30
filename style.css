@@ -1,3 +1,7 @@
+:root{
+--basic-size: 2rem;
+}
+
 html{
 	font-family: Karla;
 	font-size: 1.2rem;
@@ -5,21 +9,17 @@ html{
 }
 
 body{
-	padding: 3rem;
 	font-family: Karla;
-}
-
-header{
-	border-block-end: solid black 0.2rem;
 }
 
 hgroup{
 	font-family: Martian Mono;
-	margin-block-end: 2rem;
+	padding: 3rem;
+	margin-block-end: var(--basic-size);
 }
 
 main{
-	margin-block-start: 6rem;
+	border-block-start: solid black 0.2rem;
 	counter-reset: section;
 }
 
@@ -38,20 +38,18 @@ h2{
 section h2::before{
 	counter-increment: section;
 	content: counter(section);
-	margin-inline-end: 2rem;
+	margin-inline-end: var(--basic-size);
 }
 
 nav {
 	font-size: 1.5rem;
-	background-color: rgb(199, 211, 254);
+	background-color: rgb(218, 225, 252);
 	color: rgb(131, 131, 130);
 	block-size: 100vh;
-	float: inline-start;
+	float: inline-start; /*working with grid in this situation would be better but  we didn't work on it in class yet so I wanted to work around that with foat and sticky*/
 	position: sticky;
 	inset-block-start: 0rem;
-	padding: 2rem;
-	margin-inline-start: -3rem;
-	margin-block-end: -3rem;
+	padding: var(--basic-size);
 	counter-reset: nav;
 }
 
@@ -63,7 +61,7 @@ nav li::before{
 }
 
 section{
-	margin-inline-start: 20rem;
+	margin: var(--basic-size) 3rem 0rem 23rem;
 }
 
 section a{
@@ -80,7 +78,7 @@ p{
 
 blockquote p{
 	padding: 1rem;
-	padding-left: 3rem;
+	padding-left: var(--basic-size);
 	font-family: Martian Mono;
 	font-size: 1.5rem;
 	color: rgb(129, 129, 241);
@@ -88,7 +86,7 @@ blockquote p{
 
 aside {
 	padding: 1rem;
-	padding-left: 3rem;
+	padding-left: var(--basic-size);
 	font-family: Martian Mono;
 	line-height: 1.7;
 	color: blue;
