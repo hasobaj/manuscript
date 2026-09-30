@@ -9,12 +9,18 @@ body{
 	font-family: Karla;
 }
 
-main{
-	counter-reset: section;
+header{
+	border-block-end: solid black 0.2rem;
 }
 
 hgroup{
 	font-family: Martian Mono;
+	margin-block-end: 2rem;
+}
+
+main{
+	margin-block-start: 6rem;
+	counter-reset: section;
 }
 
 h1{
@@ -36,8 +42,16 @@ section h2::before{
 }
 
 nav {
-	font-size: 2rem;
+	font-size: 1.5rem;
+	background-color: rgb(199, 211, 254);
 	color: rgb(131, 131, 130);
+	block-size: 100vh;
+	float: inline-start;
+	position: sticky;
+	inset-block-start: 0rem;
+	padding: 2rem;
+	margin-inline-start: -3rem;
+	margin-block-end: -3rem;
 	counter-reset: nav;
 }
 
@@ -45,7 +59,16 @@ nav li::before{
 	counter-increment: nav;
 	content: counter(nav);
 	display: inline-block;
-	inline-size: 2rem
+	inline-size: 1.25rem
+}
+
+section{
+	margin-inline-start: 20rem;
+}
+
+section a{
+	color: rgb(17, 132, 65);
+	text-decoration: underline;
 }
 
 p{
@@ -63,10 +86,6 @@ blockquote p{
 	color: rgb(129, 129, 241);
 }
 
-details{
-	font-style: italic;
-}
-
 aside {
 	padding: 1rem;
 	padding-left: 3rem;
@@ -75,18 +94,17 @@ aside {
 	color: blue;
 }
 
-summary{
-	font-size: 1.5rem;
-	}
+details{
+	font-style: italic;
+}
 
 details p{
 	font-size: 1rem;
 }
 
-section a{
-	color: rgb(17, 132, 65);
-	text-decoration: underline;
-}
+summary{
+	font-size: 1.5rem;
+	}
 
 strong{
 	font-weight: 750;
