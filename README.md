@@ -3,10 +3,12 @@ This file provides context/instruction for your repository! They are written in 
 https://www.markdownguide.org/cheat-sheet/
 -->
 
-# Project 1: *Manuscript*
+# Project 1
 
-Demo/template for our [first projects](https://typography-interaction-2627.github.io/project/1/).
+## Looking Around: All Buildings Are Interesting
 
-> **Students will choose a seminal design text from [readings.design](https://readings.design), read and respond to it, and typeset their selection and reply together.**
->
-> The goal of this project is to hone your basic skills in typography, focusing on expression, hierarchy, and form appropriate to a work. You will do this through exploration, trial and error, and responding to critical feedback. And then you will execute this typesetting in code, as a web page
+A web page of Kate Wagner's article [Looking Around: All Buildings Are Interesting](https://mcmansionhell.com/post/171906495491/looking-around-all-buildings-are-interesting)
+
+combined with a response by hasobaj.
+
+Student project exploring html and css for the first time. For this project students had to typeset their reading and response together without using images. The goal was to strengthen basic skills in typography, focusing on expression and hierarchy.
