@@ -1,59 +1,82 @@
 :root{
 --basic-size: 2rem;
+
+--space-s: calc(var(--basic-size)/2);
+--space-m: var(--basic-size);
+--space-l: calc(var(--basic-size)*2);
+
+--border-size: calc(var(--basic-size)/10);
+--border: solid black var(--border-size);
+
+--color-main: blue;
+--color-secondary:rgb(131, 131, 130);
+--color-additional: rgb(172, 61, 109);
+
+--font-main:Karla;
+--font-secondary: Martian Mono;
+
+--font-sytle: italic;
+
+--font-size-base: 1rem;
+--font-size-body: calc(var(--font-size-base)*1.25);
+--font-size-m: calc(var(--font-size-base)*1.5);
+--font-size-h:calc(var(--font-size-base)*3);
+--font-size-t: calc(var(--font-size-base)*6);
+--font-weight-l: 800;
+
+--opacity: 50%;
+
 }
 
 html{
-	font-family: Karla;
-	font-size: 1.2rem;
+	font-family: var(--font-main);
+	font-size: var(--font-size-body);
 	line-height: 1.4;
 }
 
-body{
-	font-family: Karla;
-}
-
 hgroup{
-	font-family: Martian Mono;
-	padding: 2rem;
+	font-family: var(--font-secondary);
+	padding: var(--basic-size);
+
 	p{
-		margin-block-end: 1rem;
-		font-size: 1rem;
+		margin-block-end: var(--space-s);
+		font-size: var(--font-size-base);
 	}
 
 	 a{
-	color: rgb(131, 131, 130);
+	color: var(--color-secondary);
 	text-decoration: underline;
 	}
 }
 hgroup a:hover{
-	opacity: 50%;
+	opacity: var(--opacity);
 }
 
 main{
-	padding-block-end: 2rem;
-	border-block-start: solid black 0.2rem;
+	padding-block-end: var(--basic-size);
+	border-block-start: var(--border);
 	counter-reset: section;
 }
 
 footer{
-	padding:4rem;
-	border-block-start: solid black 0.2rem ;
+	padding:var(--space-l);
+	border-block-start: var(--border) ;
 }
 
 h1{
-	font-size: 6rem;
-	font-weight: 800;
+	font-size: var(--font-size-t);
+	font-weight: var(--font-weight-l);
 	text-transform: uppercase;
-	color: blue;
-	line-height: 8rem;
-	margin-block-end: 1rem;
+	color: var(--color-main);
+	line-height: calc(var(--basic-size)*4);
+	margin-block-end: var(--space-s);
 }
 
 h2{
-	font-size: 3rem;
+	font-size: var(--font-size-h);
 	text-transform: uppercase;
-	margin-block-start:1rem;
-	margin-block-end: 1rem;
+	margin-block-start:var(--space-s);
+	margin-block-end: var(--space-s);
 }
 
 section h2::before{
@@ -63,14 +86,14 @@ section h2::before{
 }
 
 nav {
-	font-size: 1.2rem;
-	border-inline-end: black solid 0.2rem;
-	color: rgb(131, 131, 130);
+	font-size: var(--font-size-body);
+	border-inline-end: var(--border);
+	color: var(--color-secondary);
 	block-size: 100vh;
 	float: inline-start; /*working with grid in this situation would be better but  we didn't work on it in class yet so I wanted to work around that with foat and sticky*/
 	position: sticky;
 	inset-block-start: 0rem;
-	margin-block-end: -2rem;
+	margin-block-end: calc(var(--basic-size)*-1);
 	padding: var(--basic-size);
 	counter-reset: nav;
 }
@@ -83,92 +106,94 @@ nav li::before{
 }
 
 section{
-	margin: 4rem 4rem 0rem 24rem;
+	margin: var(--space-l) var(--space-l) 0rem calc(var(--basic-size)*12);
 	max-inline-size: 100ch;
-	border-block-start: solid black 0.2rem;
-	margin-block-end: 4rem;
+	border-block-start: var(--border);
+	margin-block-end: var(--space-l);
+
 	p{
-	margin-block-end: 2rem;
+	margin-block-end: var(--basic-size);
 	}
 }
 
 section a{
-	color: rgb(131, 131, 130);
+	color: var(--color-secondary);
 	text-decoration: underline;
 }
 
 section a:hover{
-	opacity: 50%;
+	opacity: var(--opacity);
 }
 
 p{
-	font-size: 1.25rem;
+	font-size: var(--font-size-body);
 	em{
-		font-style: italic;
-		color: rgb(172, 61, 109)
+		font-style: var(--font-sytle);
+		color: var(--color-additional);
 		}
 }
 
 blockquote {
 	margin-inline-start: var(--basic-size);
 	padding: var(--basic-size);
-	font-family: Martian Mono;
-	font-size: 1.5rem;
-	font-weight: 800;
-	color: rgb(129, 129, 241);
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-l);
+	color: var(--color-main);
+	opacity: var(--opacity);
 }
 
 aside {
 	margin-inline-start: var(--basic-size);
-	padding: 1rem;
-	padding-left: var(--basic-size);
-	font-family: Martian Mono;
+	padding: var(--space-s);
+	padding-inline-start: var(--basic-size);
+	font-family: var(--font-secondary);
 	line-height: 1.7;
-	color: blue;
+	color: var(--color-main);
 }
 
 summary{
-	font-size: 1.5rem;
-	color:blue;
+	font-size: var(--font-size-m);
+	color:var(--color-main);
 	}
 
 summary:hover{
-	opacity: 50%;;
+	opacity: var(--opacity);
 }
 
 details{
-	font-style: italic;
+	font-style: var(--font-sytle);
 }
 
 details p{
-	font-size: 1rem;
+	font-size: var(--font-size-base);
 }
 
 strong{
-	font-weight: 750;
+	font-weight: var(--font-weight-l);
 }
 
 #response{
-	color:blue;
-	font-style: italic;
+	color:var(--color-main);
+	font-style: var(--font-sytle);
 }
 
 #response:hover{
-	opacity: 50%;
+	opacity: var(--opacity);
 }
 
 #questions{
 	font-size: 0.75rem;
-	color: rgb(131, 131, 130);
-	border: blue solid 0.2rem;
-	margin:3rem;
-	padding: 2rem;
+	color: var(--color-secondary);
+	border: solid var(--color-main) var(--border-size);
+	margin: calc(var(--basic-size)*1.5);
+	padding: var(--basic-size);
 	text-align: center;
 }
 
 #mansion{
-	color:rgb(131, 131, 130);
-	font-weight: 800;
-	font-size:3rem;
+	color:var(--color-secondary);
+	font-weight: var(--font-weight-l);
+	font-size:var(--font-size-h);
 	text-align: center;
 }
