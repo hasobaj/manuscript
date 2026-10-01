@@ -14,12 +14,23 @@ body{
 
 hgroup{
 	font-family: Martian Mono;
-	padding: 3rem;
-	margin-block-end: var(--basic-size);
+	padding: 2rem;
+	p{
+		margin-block-end: 1rem;
+		font-size: 1rem;
+	}
+
+	 a{
+	color: rgb(131, 131, 130);
+	text-decoration: underline;
+	}
+}
+hgroup a:hover{
+	opacity: 50%;
 }
 
 main{
-	padding-block-end: 4rem;
+	padding-block-end: 2rem;
 	border-block-start: solid black 0.2rem;
 	counter-reset: section;
 }
@@ -34,11 +45,15 @@ h1{
 	font-weight: 800;
 	text-transform: uppercase;
 	color: blue;
+	line-height: 8rem;
+	margin-block-end: 1rem;
 }
 
 h2{
-	font-size: 4rem;
+	font-size: 3rem;
 	text-transform: uppercase;
+	margin-block-start:1rem;
+	margin-block-end: 1rem;
 }
 
 section h2::before{
@@ -49,13 +64,13 @@ section h2::before{
 
 nav {
 	font-size: 1.2rem;
-	background-color: rgb(218, 225, 252);
+	border-inline-end: black solid 0.2rem;
 	color: rgb(131, 131, 130);
 	block-size: 100vh;
 	float: inline-start; /*working with grid in this situation would be better but  we didn't work on it in class yet so I wanted to work around that with foat and sticky*/
 	position: sticky;
 	inset-block-start: 0rem;
-	margin-block-end: -4rem;
+	margin-block-end: -2rem;
 	padding: var(--basic-size);
 	counter-reset: nav;
 }
@@ -70,25 +85,35 @@ nav li::before{
 section{
 	margin: var(--basic-size) 3rem 0rem 23rem;
 	max-inline-size: 100ch;
+	border-block-start: solid black 0.2rem;
+	margin-block-end: 4rem;
+	p{
+	margin-block-end: 2rem;
+	}
 }
 
 section a{
-	color: rgb(17, 132, 65);
+	color: rgb(131, 131, 130);
 	text-decoration: underline;
+}
+
+section a:hover{
+	opacity: 50%;
 }
 
 p{
 	font-size: 1.25rem;
 	em{
 		font-style: italic;
+		color: rgb(172, 61, 109)
 		}
 }
 
-blockquote p{
-	padding: 1rem;
-	padding-left: var(--basic-size);
+blockquote {
+	padding: var(--basic-size);
 	font-family: Martian Mono;
 	font-size: 1.5rem;
+	font-weight: 800;
 	color: rgb(129, 129, 241);
 }
 
@@ -100,6 +125,15 @@ aside {
 	color: blue;
 }
 
+summary{
+	font-size: 1.5rem;
+	color:blue;
+	}
+
+summary:hover{
+	opacity: 50%;;
+}
+
 details{
 	font-style: italic;
 }
@@ -108,10 +142,31 @@ details p{
 	font-size: 1rem;
 }
 
-summary{
-	font-size: 1.5rem;
-	}
-
 strong{
 	font-weight: 750;
+}
+
+#response{
+	color:blue;
+	font-style: italic;
+}
+
+#response:hover{
+	opacity: 50%;
+}
+
+#questions{
+	font-size: 0.75rem;
+	color: rgb(131, 131, 130);
+	border: blue solid 0.2rem;
+	margin:3rem;
+	padding: 2rem;
+	text-align: center;
+}
+
+#mansion{
+	color:rgb(131, 131, 130);
+	font-weight: 800;
+	font-size:3rem;
+	text-align: center;
 }
