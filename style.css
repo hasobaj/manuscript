@@ -19,8 +19,14 @@ hgroup{
 }
 
 main{
+	padding-block-end: 4rem;
 	border-block-start: solid black 0.2rem;
 	counter-reset: section;
+}
+
+footer{
+	padding:4rem;
+	border-block-start: solid black 0.2rem ;
 }
 
 h1{
@@ -42,13 +48,14 @@ section h2::before{
 }
 
 nav {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	background-color: rgb(218, 225, 252);
 	color: rgb(131, 131, 130);
 	block-size: 100vh;
 	float: inline-start; /*working with grid in this situation would be better but  we didn't work on it in class yet so I wanted to work around that with foat and sticky*/
 	position: sticky;
 	inset-block-start: 0rem;
+	margin-block-end: -4rem;
 	padding: var(--basic-size);
 	counter-reset: nav;
 }
@@ -62,6 +69,7 @@ nav li::before{
 
 section{
 	margin: var(--basic-size) 3rem 0rem 23rem;
+	max-inline-size: 100ch;
 }
 
 section a{
