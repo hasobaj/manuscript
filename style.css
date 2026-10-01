@@ -12,8 +12,8 @@
 --color-secondary:rgb(131, 131, 130);
 --color-additional: rgb(172, 61, 109);
 
---font-main:Karla;
---font-secondary: Martian Mono;
+--font-main: Karla, Arial, sans-serif;
+--font-secondary: Martian Mono, Georgia;
 
 --font-style: italic;
 
