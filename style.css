@@ -83,7 +83,7 @@ nav li::before{
 }
 
 section{
-	margin: var(--basic-size) 3rem 0rem 23rem;
+	margin: 4rem 4rem 0rem 24rem;
 	max-inline-size: 100ch;
 	border-block-start: solid black 0.2rem;
 	margin-block-end: 4rem;
@@ -110,6 +110,7 @@ p{
 }
 
 blockquote {
+	margin-inline-start: var(--basic-size);
 	padding: var(--basic-size);
 	font-family: Martian Mono;
 	font-size: 1.5rem;
@@ -118,6 +119,7 @@ blockquote {
 }
 
 aside {
+	margin-inline-start: var(--basic-size);
 	padding: 1rem;
 	padding-left: var(--basic-size);
 	font-family: Martian Mono;
