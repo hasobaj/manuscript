@@ -15,7 +15,7 @@
 --font-main:Karla;
 --font-secondary: Martian Mono;
 
---font-sytle: italic;
+--font-style: italic;
 
 --font-size-base: 1rem;
 --font-size-body: calc(var(--font-size-base)*1.25);
@@ -34,22 +34,32 @@ html{
 	line-height: 1.4;
 }
 
-hgroup{
+hgroup, blockquote, aside{
 	font-family: var(--font-secondary);
-	padding: var(--basic-size);
+}
 
+em, details, #response{
+	font-style: var(--font-style);
+}
+
+h1, blockquote, #mansion{
+	font-weight: var(--font-weight-l);
+}
+
+h1,h2{
+	text-transform: uppercase;
+}
+
+blockquote, aside, summary, #response{
+	color: var(--color-main);
+}
+
+hgroup{
+	padding: var(--basic-size);
 	p{
 		margin-block-end: var(--space-s);
 		font-size: var(--font-size-base);
 	}
-
-	 a{
-	color: var(--color-secondary);
-	text-decoration: underline;
-	}
-}
-hgroup a:hover{
-	opacity: var(--opacity);
 }
 
 main{
@@ -60,13 +70,11 @@ main{
 
 footer{
 	padding:var(--space-l);
-	border-block-start: var(--border) ;
+	border-block-start: var(--border);
 }
 
 h1{
 	font-size: var(--font-size-t);
-	font-weight: var(--font-weight-l);
-	text-transform: uppercase;
 	color: var(--color-main);
 	line-height: calc(var(--basic-size)*4);
 	margin-block-end: var(--space-s);
@@ -74,7 +82,6 @@ h1{
 
 h2{
 	font-size: var(--font-size-h);
-	text-transform: uppercase;
 	margin-block-start:var(--space-s);
 	margin-block-end: var(--space-s);
 }
@@ -105,6 +112,10 @@ nav li::before{
 	inline-size: 1.25rem
 }
 
+li a{
+ text-decoration: none;
+}
+
 section{
 	margin: var(--space-l) var(--space-l) 0rem calc(var(--basic-size)*12);
 	max-inline-size: 100ch;
@@ -116,19 +127,9 @@ section{
 	}
 }
 
-section a{
-	color: var(--color-secondary);
-	text-decoration: underline;
-}
-
-section a:hover{
-	opacity: var(--opacity);
-}
-
 p{
 	font-size: var(--font-size-body);
 	em{
-		font-style: var(--font-sytle);
 		color: var(--color-additional);
 		}
 }
@@ -136,10 +137,7 @@ p{
 blockquote {
 	margin-inline-start: var(--basic-size);
 	padding: var(--basic-size);
-	font-family: var(--font-secondary);
 	font-size: var(--font-size-m);
-	font-weight: var(--font-weight-l);
-	color: var(--color-main);
 	opacity: var(--opacity);
 }
 
@@ -147,38 +145,27 @@ aside {
 	margin-inline-start: var(--basic-size);
 	padding: var(--space-s);
 	padding-inline-start: var(--basic-size);
-	font-family: var(--font-secondary);
 	line-height: 1.7;
-	color: var(--color-main);
 }
 
 summary{
 	font-size: var(--font-size-m);
-	color:var(--color-main);
 	}
-
-summary:hover{
-	opacity: var(--opacity);
-}
-
-details{
-	font-style: var(--font-sytle);
-}
 
 details p{
 	font-size: var(--font-size-base);
+}
+
+a {
+	color: var(--color-secondary);
+	text-decoration: underline;
 }
 
 strong{
 	font-weight: var(--font-weight-l);
 }
 
-#response{
-	color:var(--color-main);
-	font-style: var(--font-sytle);
-}
-
-#response:hover{
+hgroup a:hover, section a:hover, summary:hover, #response:hover{
 	opacity: var(--opacity);
 }
 
@@ -193,7 +180,6 @@ strong{
 
 #mansion{
 	color:var(--color-secondary);
-	font-weight: var(--font-weight-l);
 	font-size:var(--font-size-h);
 	text-align: center;
 }
